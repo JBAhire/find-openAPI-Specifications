@@ -1,0 +1,21 @@
+name: e2e test
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+  # workflow_dispatch will let us manually trigger the workflow from GitHub actions dashboard.
+  # See https://docs.github.com/en/free-pro-team@latest/actions/managing-workflow-runs/manually-running-a-workflow 
+  workflow_dispatch:
+
+
+jobs:
+  Validate-github-action:
+    runs-on: ubuntu-20.04
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v2
+      - name: Run OpenAPI Spec Finder
+        uses: ./
+        with:
+          repository: 'https://github.com/jbahire/find-openAPI-Specifications'
