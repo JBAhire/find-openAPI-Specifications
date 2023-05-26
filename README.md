@@ -8,7 +8,7 @@ The action will recursively search through all directories of the provided repos
 
 ### `repository`
 
-**Required** The URL of the GitHub repository to search.
+**Optional** The URL of the GitHub repository to search, if it's differnt than your current repository. 
 
 ### `search-dir`
 

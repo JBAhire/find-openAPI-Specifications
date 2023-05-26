@@ -3,19 +3,22 @@
 repository=$1
 search_dir=$2
 
-if [ -z "$repository" ]; then
-  echo "Please provide a repository URL."
-  exit 1
-fi
-
-# Clone the repository
-git clone $repository /tmp/repo
-
 # Go to the repository root or the specified directory
-if [ -z "$search_dir" ]; then
-  cd /tmp/repo
+if [ -z "$repository" ]; then
+  if [ -z "$search_dir" ]; then
+    cd $GITHUB_WORKSPACE
+  else
+    cd $GITHUB_WORKSPACE/$search_dir
+  fi
 else
-  cd /tmp/repo/$search_dir
+  # Clone the repository
+  git clone $repository /tmp/repo
+
+  if [ -z "$search_dir" ]; then
+    cd /tmp/repo
+  else
+    cd /tmp/repo/$search_dir
+  fi
 fi
 
 # Search for OpenAPI 3.x.x specifications

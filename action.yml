@@ -3,7 +3,7 @@ description: 'Find OpenAPI Specifications in the repository'
 inputs:
   repository:
     description: 'GitHub repository URL'
-    required: true
+    required: false
   search-dir:
     description: 'Directory to search'
     required: false
