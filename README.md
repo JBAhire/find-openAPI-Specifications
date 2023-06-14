@@ -38,7 +38,7 @@ jobs:
       - name: Run OpenAPI Spec Finder
         uses: ./.github/actions/openapi-spec-finder
         with:
-          repository: 'https://github.com/your-repo'
+          repository: 'https://github.com/your-repo' #Optional (By default searches the checked out repository)
           search-dir: '/path/to/search'  # Optional
 ```
 
