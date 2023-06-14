@@ -16,6 +16,8 @@ jobs:
       - name: Checkout Repository
         uses: actions/checkout@v2
       - name: Run OpenAPI Spec Finder
+        id: find-specs
         uses: ./
       - name: Use spec files
-        run: echo "Found spec files: ${{ steps.find-specs.outputs.spec_files }}"
+        run: |
+          echo "Found spec files: ${{ steps.find-specs.outputs.spec_files }}"
