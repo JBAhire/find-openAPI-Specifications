@@ -27,4 +27,4 @@ spec_files=$(find . -type f \( -name "*.yaml" -o -name "*.yml" -o -name "*.json"
 # Search for Swagger 2.0 specifications
 spec_files+=$(find . -type f \( -name "*.yaml" -o -name "*.yml" -o -name "*.json" \) -print0 | xargs -0 grep -l "swagger: \"2.0\"")
 
-echo $spec_files
+echo "::set-output name=spec_files::$spec_files"

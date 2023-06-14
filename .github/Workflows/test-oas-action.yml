@@ -17,5 +17,5 @@ jobs:
         uses: actions/checkout@v2
       - name: Run OpenAPI Spec Finder
         uses: ./
-        with:
-          repository: 'https://github.com/jbahire/find-openAPI-Specifications'
+      - name: Use spec files
+        run: echo "Found spec files: ${{ steps.find-specs.outputs.spec_files }}"
