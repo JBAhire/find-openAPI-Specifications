@@ -8,7 +8,6 @@ on:
   # See https://docs.github.com/en/free-pro-team@latest/actions/managing-workflow-runs/manually-running-a-workflow 
   workflow_dispatch:
 
-
 jobs:
   Validate-github-action:
     runs-on: ubuntu-20.04
