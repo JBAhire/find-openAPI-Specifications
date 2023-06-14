@@ -1,5 +1,8 @@
 name: 'OpenAPI Spec Finder'
 description: 'Find OpenAPI Specifications in the repository'
+branding:
+  icon: 'search'
+  color: 'gray-dark'
 inputs:
   repository:
     description: 'GitHub repository URL'
